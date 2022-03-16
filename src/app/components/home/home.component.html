@@ -1,1 +1,8 @@
-<p *ngIf="data">{{data.main.temp}}</p>
+<div *ngIf="data">
+  <h1> Country {{countryData.country_name}}</h1>
+  <h1>City {{countryData.city}}</h1>
+  <h1>Temperature {{data.main.temp}}</h1>
+  <h1>Humidity {{data.main.humidity}}</h1>
+  <h1>Pressure {{data.main.pressure}}</h1>
+
+</div>
