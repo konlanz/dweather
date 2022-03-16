@@ -1,8 +1,17 @@
-<div *ngIf="data">
-  <h1> Country {{countryData.country_name}}</h1>
-  <h1>City {{countryData.city}}</h1>
-  <h1>Temperature {{data.main.temp}}</h1>
-  <h1>Humidity {{data.main.humidity}}</h1>
-  <h1>Pressure {{data.main.pressure}}</h1>
+<div class="card" *ngIf="data">
+  <div class="top-element" ><i class="material-icons" style="font-size:15em;">cloud</i>
+    <h2 class="top-text">{{data.main.temp}}°C</h2>
+  </div>
+  <div class="data-element">
+    <div><i class="material-icons" style="font-size:3em">place</i> {{countryData.country_name}}</div>
+    <div><i class="material-icons" style="font-size:3em">my_location</i> {{countryData.city}}</div>
+  </div>
+  <p class="space-up"></p>
+  <div class="data-element">
+    <div>Wind <div>{{data.wind.speed}}km/h</div></div>
+    <div>Humidity <div>{{data.main.humidity}} %</div> </div>
+    <div>Pressure <div>{{data.main.pressure}} mb</div></div>
+    <div>visibility <div>{{data.visibility/1000}} km</div></div>
+  </div>
 
 </div>
