@@ -26,4 +26,38 @@
   </label>°F
 </div>
 </div>
+<div class="forcast-weather">
+  <div class="small-card" *ngIf="data">
+    <div class="data-element">
+      <h3>Day</h3>
+    </div>
+    <div class="top-element" ><i class="material-icons" style="font-size:6em;">cloud</i>
+    </div>
+    <div class="data-element">
+      <h2>{{tempratureData}} {{sybol}}</h2>
+    </div>
+    <p class="space-up"></p>
+    <div class="data-element">
+      <div>Max <div class="data-text">{{tempratureData}}° </div></div>
+      <div>Min <div class="data-text">{{tempratureData}}°</div> </div>
+    </div>
+  </div>
+  <div class="small-card" *ngIf="data">
+    <div class="data-element">
+      <h3>day</h3>
+    </div>
+    <div class="top-element" ><i class="material-icons" style="font-size:6em;">cloud</i>
+    </div>
+    <div class="data-element">
+      <h2 >{{tempratureData}} {{sybol}}</h2>
+    </div>
+    <p class="space-up"></p>
+    <div class="data-element">
+      <div>Max <div class="data-text">{{tempratureData}}°</div></div>
+      <div>Min <div class="data-text">{{tempratureData}}°</div> </div>
+    </div>
+  </div>
+
+
+</div>
 </main>

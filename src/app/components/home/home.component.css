@@ -107,3 +107,28 @@ input:checked + .slider:before {
   margin-top: 2em;
   position: relative;
 }
+
+.small-card{
+  height: 20em;
+  max-width: 6em;
+  width: 100%;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-right-color: rgba(255, 255, 255, 0.1);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin: 2em;
+  color: #fff;
+  text-align: center;
+  padding: 1em;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.forcast-weather{
+  display: grid;
+  grid-template-columns: 40% 40%;
+  justify-content: space-evenly;
+}
