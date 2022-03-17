@@ -1,10 +1,15 @@
+<main>
 <div class="card" *ngIf="data">
-  <div class="top-element" ><i class="material-icons" style="font-size:15em;">cloud</i>
-    <h2 class="top-text">{{data.main.temp}}°C</h2>
+  <div class="data-element">
+    <h3>Current Weather</h3>
+    <div>Feels like <div class="data-text">{{tempratureDataFeelsLike}} {{sybol}}</div></div>
+  </div>
+  <div class="top-element" ><i class="material-icons" style="font-size:10em;">cloud</i>
+    <h2 class="top-text">{{tempratureData}} {{sybol}}</h2>
   </div>
   <div class="data-element">
-    <div><i class="material-icons" style="font-size:3em">place</i> {{countryData.country_name}}</div>
-    <div><i class="material-icons" style="font-size:3em">my_location</i> {{countryData.city}}</div>
+    <div class="data-element"><i class="material-icons" style="font-size:3em">place</i> {{countryData.country_name}}</div>
+    <div class="data-element"><i class="material-icons" style="font-size:3em">my_location</i> {{countryData.city}}</div>
   </div>
   <p class="space-up"></p>
   <div class="data-element">
@@ -13,5 +18,12 @@
     <div>Pressure <div class="data-text">{{data.main.pressure}} mb</div></div>
     <div>visibility <div class="data-text">{{data.visibility/1000}} km</div></div>
   </div>
-
+<div class="buttonplacement">
+  °C
+  <label class="switch">
+     <input type="checkbox" name="toogle" NgModel="toogle" (change) ="toogle($event)">
+    <span class="slider round"></span>
+  </label>°F
 </div>
+</div>
+</main>
