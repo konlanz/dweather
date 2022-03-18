@@ -4,13 +4,14 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { HomeComponent } from './components/home/home.component';
+import { NotfoundComponent } from './components/notfound/notfound.component';
 
 const routes: Routes = [
-  { path: 'details', component: DetailComponent },
+  { path: 'error', component: NotfoundComponent },
   { path: '', component: HomeComponent},
   { path: 'about-us', component: AboutComponent},
   { path: 'contact-us', component: ContactComponent},
-  { path: '**', redirectTo: '/' }
+  { path: '**', redirectTo: 'error' }
 ];
 
 @NgModule({
