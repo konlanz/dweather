@@ -27,8 +27,8 @@ export class HomeComponent implements OnInit {
       console.log(this.countryData)
       this.weatherservice.getCurrentWeather(value.latitude, value.longitude).subscribe( (value:any) => {
         this.data = value;
-        this.tempratureDataFeelsLike = this.data.main.feels_like;
         this.tempratureData = this.data.main.temp;
+        this.tempratureDataFeelsLike = this.data.main.feels_like;
         console.log(this.data);
       }
       )
@@ -38,7 +38,6 @@ export class HomeComponent implements OnInit {
     }
     );
   }
-
   toogle(value: any){
     if(value.target.checked){
      this.tempratureData =  this.getWeatherInFarihient(this.tempratureData);
@@ -65,7 +64,7 @@ export class HomeComponent implements OnInit {
   }
 
   showSymbol(){
-    if(this.showFarihient == true){
+    if(this.showFarihient){
       this.sybol = '°F';
     }
     else{

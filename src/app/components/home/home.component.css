@@ -110,7 +110,7 @@ input:checked + .slider:before {
 
 .small-card{
   height: 20em;
-  max-width: 6em;
+  max-width: 6.5em;
   width: 100%;
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.05);
