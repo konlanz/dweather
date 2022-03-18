@@ -1,4 +1,4 @@
-import { environment } from './../../environments/environment.prod';
+import { environment } from '../../environments/environment.prod';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { GeolocationService } from './geolocation.service';
@@ -12,7 +12,7 @@ import {
 @Injectable({
   providedIn: 'root'
 })
-export class WeatherserviceService {
+export class WeatherService {
   baseUrl = environment.baseUrl;
   apiKey = environment.apiKey;
   constructor(private httpClient: HttpClient, public geolocationService: GeolocationService) { }
@@ -33,18 +33,16 @@ export class WeatherserviceService {
       return this.httpClient.get(url).pipe(catchError(this.handleError.bind(this)));
     }
   }
-  
+
   handleError(error: any) {
     console.log(error);
     if (error.name == "TimeoutError" || error.message == "Timeout has occurred") {
     } else {
 
-      alert(error.error.error.message);
+
 
       if (error.status === 0) {
-        // A client-side or network error occurred. Handle it accordingly.
-        alert("Please check your Internet connection to continue.");
-        alert("Please check your Internet connection to continue.");
+
 
         console.error('An error occurred:', error.error);
 

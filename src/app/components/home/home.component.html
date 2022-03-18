@@ -2,10 +2,10 @@
 <div class="card" *ngIf="data">
   <div class="data-element">
     <h3>Current Weather</h3>
-    <div>Feels like <div class="data-text">{{tempratureDataFeelsLike}} {{sybol}}</div></div>
+    <div>Feels like <div class="data-text">{{temperatureDataFeelsLike}} {{symbol}}</div></div>
   </div>
   <div class="top-element" ><img style="width: 100px" src="http://openweathermap.org/img/w/{{data.weather[0].icon}}.png"/>
-    <h2 class="top-text">{{tempratureData}} {{sybol}}</h2>
+    <h2 class="top-text">{{temperatureData}} {{symbol}}</h2>
   </div>
   <div class="data-element">
     <div class="data-element"><i class="material-icons" style="font-size:3em">place</i> {{countryData.country_name}}</div>
@@ -21,7 +21,7 @@
 <div class="buttonplacement">
   °C
   <label class="switch">
-     <input type="checkbox" name="toogle" NgModel="toogle" (change) ="toogle($event)">
+     <input type="checkbox" name="toggle" NgModel="toggle" (change) ="toggle($event)">
     <span class="slider round"></span>
   </label>°F
 </div>
