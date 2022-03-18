@@ -1,5 +1,17 @@
 # Dweather
+
  # A weather app for the that get's your weather based on your location using your ip address.
+
+  # ## Installation
+  npm install in the process directory
+  # ## Usage
+  get an api key from open weather
+  add it to the environment.prod.ts file
+  
+
+  # ## API
+  open weather api
+   
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
 
 ## Development server
