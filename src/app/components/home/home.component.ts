@@ -27,6 +27,7 @@ export class HomeComponent implements OnInit {
     this.geolocationService.getLocationUsingIP().subscribe( (value:any) => {
       this.countryData = value;
       console.log(this.countryData)
+      
       this.weatherservice.getCurrentWeather(value.latitude, value.longitude).subscribe( (value:any) => {
         this.data = value;
         this.tempratureData = this.data.main.temp;

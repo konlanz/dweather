@@ -33,6 +33,7 @@ export class WeatherserviceService {
       return this.httpClient.get(url).pipe(catchError(this.handleError.bind(this)));
     }
   }
+  
   handleError(error: any) {
     console.log(error);
     if (error.name == "TimeoutError" || error.message == "Timeout has occurred") {
