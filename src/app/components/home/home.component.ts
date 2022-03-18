@@ -15,6 +15,8 @@ export class HomeComponent implements OnInit {
   showFarihient: boolean =false;
   showCelcius: boolean = true;
   sybol : String = '°C';
+  minimumTemperature: number = 0;
+  maximumTemperature: number = 0;
 
   constructor(private geolocationService: GeolocationService, private weatherservice: WeatherserviceService) { }
 
@@ -28,6 +30,8 @@ export class HomeComponent implements OnInit {
       this.weatherservice.getCurrentWeather(value.latitude, value.longitude).subscribe( (value:any) => {
         this.data = value;
         this.tempratureData = this.data.main.temp;
+        this.tempratureDataFeelsLike = this.data.main.temp_min;
+        this.minimumTemperature = this.data.main.temp_max;
         this.tempratureDataFeelsLike = this.data.main.feels_like;
         console.log(this.data);
       }

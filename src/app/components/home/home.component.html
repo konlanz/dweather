@@ -4,7 +4,7 @@
     <h3>Current Weather</h3>
     <div>Feels like <div class="data-text">{{tempratureDataFeelsLike}} {{sybol}}</div></div>
   </div>
-  <div class="top-element" ><i class="material-icons" style="font-size:10em;">cloud</i>
+  <div class="top-element" ><img style="width: 100px" src="http://openweathermap.org/img/w/{{data.weather[0].icon}}.png"/>
     <h2 class="top-text">{{tempratureData}} {{sybol}}</h2>
   </div>
   <div class="data-element">
@@ -25,39 +25,5 @@
     <span class="slider round"></span>
   </label>°F
 </div>
-</div>
-<div class="forcast-weather">
-  <div class="small-card" *ngIf="data">
-    <div class="data-element">
-      <h3>Day</h3>
-    </div>
-    <div class="top-element" ><i class="material-icons" style="font-size:6em;">cloud</i>
-    </div>
-    <div class="data-element">
-      <h2>{{tempratureData}} {{sybol}}</h2>
-    </div>
-    <p class="space-up"></p>
-    <div class="data-element">
-      <div>Max <div class="data-text">{{tempratureData}}° </div></div>
-      <div>Min <div class="data-text">{{tempratureData}}°</div> </div>
-    </div>
-  </div>
-  <div class="small-card" *ngIf="data">
-    <div class="data-element">
-      <h3>day</h3>
-    </div>
-    <div class="top-element" ><i class="material-icons" style="font-size:6em;">cloud</i>
-    </div>
-    <div class="data-element">
-      <h2 >{{tempratureData}} {{sybol}}</h2>
-    </div>
-    <p class="space-up"></p>
-    <div class="data-element">
-      <div>Max <div class="data-text">{{tempratureData}}°</div></div>
-      <div>Min <div class="data-text">{{tempratureData}}°</div> </div>
-    </div>
-  </div>
-
-
 </div>
 </main>
